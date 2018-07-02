@@ -1,5 +1,5 @@
 import itertools
-
+import pickle
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -65,4 +65,10 @@ plt.xlabel('Time in weeks')
 plt.ylabel('Performance in %')
 plt.show()
 
-#dies ist eintemporaerer kommentar ttttttttt
+#save data
+filename="measurements.txt"
+file=open(filename, 'wb')
+pickle.dump(df, file)
+#read data
+#file=open(filenam, 'rb')
+#df1=pickle.load(file)
